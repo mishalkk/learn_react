@@ -7,3 +7,9 @@ export const User = (props) => {
 };
 
 
+export const Planet = (props) => {
+    if (props.isGasPlanet) return (
+        <div>{props.name}</div>
+    )
+}
+
