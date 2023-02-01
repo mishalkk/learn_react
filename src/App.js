@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 function App() {
   const [inputValue, setInputValue] = useState("");
+  const [showText, setShowText] = useState(true);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <input type="text" onChange={handleInputChange} />
-      {inputValue}
+      <button onClick={() => {setShowText(!showText)}}>show/hide</button>
+      {showText && <h1>{inputValue}</h1>}
     </div>
   );
 }
