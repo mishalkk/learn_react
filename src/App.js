@@ -14,7 +14,14 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function App() {
 
-  const client = new QueryClient();
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        // do not reload page when switching windows
+        refetchOnWindowFocus: false,
+      }
+    }
+  });
 
   return (
     <div className="App">
