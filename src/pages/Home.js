@@ -3,7 +3,7 @@ import Axios from "axios";
 
 
 export const Home = () => {
-    const { data, isLoading, isError, refetch } = useQuery(["cat"], () => {
+    const { data: catData, isLoading, isError, refetch } = useQuery(["cat"], () => {
         return Axios.get("https://catfact.ninja/fact").then((res) => res.data);
     });
 
@@ -18,7 +18,7 @@ export const Home = () => {
     return (
         <div>
             <h1>Home Page</h1>
-            <p>{data?.fact}</p>
+            <p>{catData?.fact}</p>
             <button onClick={refetch}>Refresh</button>
         </div>
     );
