@@ -4,3 +4,9 @@ npm start
 
 # Install react query
 npm install @tanstack/react-query
+-----------------------------------
+npm install react-hook-form yup
+# react-hook-form gives us all functionality related to FORM
+# yup is for validation
+
+npm install @hookform/resolvers
