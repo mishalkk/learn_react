@@ -12,3 +12,5 @@ npm install react-hook-form yup
 npm install @hookform/resolvers
  
 npm install prop-types
+-----------------------------------
+npx create-react-app . --template typescript
