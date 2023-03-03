@@ -10,3 +10,5 @@ npm install react-hook-form yup
 # yup is for validation
 
 npm install @hookform/resolvers
+ 
+npm install prop-types
