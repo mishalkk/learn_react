@@ -4,7 +4,15 @@ interface Props {
     age: number;
     isMarried: boolean;
     friends: string[];
+    // ? used to define 'not required
+    country?: Country;
 }
+
+export enum Country {
+    Brazil = "Brazil",
+    India = "India",
+    France = "France"
+ }
 
 export const Person = (props: Props) => {
 
@@ -19,6 +27,7 @@ export const Person = (props: Props) => {
             {props.friends.map((friend: string) => (
                 <h1>{friend}</h1>
             ))}
+            <h1>Country: {props.country}</h1>
         </div>
     );
 };  
