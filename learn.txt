@@ -1,6 +1,8 @@
 npx create-react-app .
 
 npm start
+----------------------------
+npm install react-router-dom
 
 # Install react query
 npm install @tanstack/react-query
@@ -14,3 +16,5 @@ npm install @hookform/resolvers
 npm install prop-types
 -----------------------------------
 npx create-react-app . --template typescript
+--------------------------------------
+npm install @reduxjs/toolkit react-redux
