@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
-import { async } from "@firebase/util";
 
 
 export const Navbar = () => {
@@ -18,7 +17,11 @@ export const Navbar = () => {
         <div className="navbar">
             <div className="links">
                 <Link to="/">Home</Link>
-                <Link to="/login">Login</Link>
+                {!user ? (
+                    <Link to="/login">Login</Link>
+                ) : (
+                    <Link to="/create-post">Create Post</Link>
+                ) }
             </div>
             <div className="user">
                 {user && (
